@@ -80,13 +80,14 @@ color: white;
 
 .card-Container{
     margin-top: 40px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
     gap: 35px;
 }
 
+
 .card {
-    width: 18%;
+    width: 100%;
     position: relative;
     padding: 9px;
     border: 1px solid #4d4d4d4a;
@@ -156,4 +157,13 @@ color: white;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.details{
+    display: flex;
+    height: 70vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }

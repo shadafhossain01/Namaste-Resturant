@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Card from './Card'
 import Shimmer from './Shimmer'
+import { Link } from 'react-router-dom'
 const Body = () => {
 
   const [products,setProducts]=useState([])
@@ -37,7 +38,9 @@ function searchFun(){
     </div>
 <div className='card-Container'>
 {products.map((item,idx)=>(
-  <Card data={item} key={idx} />
+  <Link to={`/product/${item.id}`} key={idx}>
+      <Card data={item}  />
+  </Link>
 ))}
 </div>
     </div>

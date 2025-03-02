@@ -7,6 +7,7 @@ import Contact from "./components/Contact.jsx"
 import Error from './components/Error.jsx'
 import Navbar from './components/Navbar.jsx'
 import { createBrowserRouter,Outlet,RouterProvider } from 'react-router-dom'
+import ProductDetail from './components/ProductDetail.jsx'
 
 function Layout(){
 return(
@@ -38,6 +39,10 @@ const appRouter=createBrowserRouter([
       {
         path:"/contact",
         element:<Contact/>
+      },
+      {
+        path:"/product/:productId",
+        element:<ProductDetail/>
       },
     ]
   }
